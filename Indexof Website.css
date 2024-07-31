@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2? family=Poppins&family=Roboto:wght@300;400&display=swap');
+*{
+    margin:1px; padding:2px;
+    box-sizing:border-box;
+    font-family:'Roboto', sans-serif;
+}
+body{
+    width:auto;
+    background-color:rgb(251, 251, 244);
+    overflow-x:scroll;
+}
+.flex-r{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.flex-c{
+    display: grid;
+    justify-content: safe;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    width:auto;
+    padding: 15px 10px;
+    background-color:rgba(178, 239, 177, 0.4);
+    color:crimson;
+    transition:5s;
+}
+.nav{
+    justify-content: space-between !important;
+    width:100%;
+    height:15vh;
+    position:sticky;
+}
+.nav-logo{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.ham{
+    background: url(https://i.ibb.co/HrfVRcx/menu.png);
+    width:28px;
+    height:23px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.ham.active{
+    background:url(https://i.ibb.co/rt3HybH/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-size: 30px;
+}
+.menu{
+    position:static;
+    top: 10vh;
+    border-radius: 15px;
+    right: inherit;
+    width:auto;
+    height:6vh;
+    padding:30px;
+    background-color:rgb(19, 19, 137);
+    gap:15px 2px;
+    transform: translateX(120%);
+    opacity:0;
+    transition:all 5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.menu.on{
+    opacity:1;
+    transform: translateX(0%);
+}
+.menu a{
+    text-decoration: none;
+    color:#001721;
+    font-size:36px;
+    transition: all 0.4s linear;
+}
+.menu a:hover{
+    transform:translateX(10px);
+}
+main{
+    width:auto;
+    height:73vh;
+}
+.main-img img{
+    width:250px;
+}
+.lg-head{
+    font-size: 28px;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color:rgba(50, 33, 12, 0.488);
+}
+.m-head{
+    font-size:20px;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.para{
+    font-size: 16px;
+    margin: 20px 3px;
+    text-align: center;
+    font-family:'Poppins',sans-serif;
+    max-width: 450px;
+}
+.btn{
+    float:left;
+    padding:7px 35px;
+    border-radius:80px;
+    display:inline-block;
+    background-color:#4b8cfb;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.1), 0 2px 10px 0 rgba(0,0,0,0.1);
+    transition:all 4s ease;
+}
+.btn:hover{
+    background-color: transparent;
+    color:#e6c5c5;
+    border:1px solid #fff;
+    font-weight:500;
+    transition-duration: 2s;
+}
+
+footer{
+    gap:10px 2px;
+    height:12vh;
+}
+.social-link{
+    gap:0px 25px;
+}
+.social-link a i{
+    color:#ff;
+    font-size:25px;
+    transition:all 2s linear;
+}
+.social-link a i:hover{
+    transition:translateY(-7px);
+}
+.dev-info a{
+    color:rgba(7, 7, 7, 0.8);
+}
+@media(min-width:448px){
+    .container{
+        padding:10px 34px;
+    }
+    .lg-head{
+        font-size:40px;
+    }
+    .m-head{
+        font-size:28px;
+    }
+}
+@media(min-width:600px){
+    .container{
+        padding:10px 50px;
+        transform: translateX(2px);
+    }
+    .nav-logo{
+        font-size: 22px;
+    }
+    main{
+        justify-content: flex-start !important;
+    }
+    .main-text{
+        align-items: flex-start;
+    }
+    .lg-head{
+        font-size: 45px;
+    }
+    .m-head{
+        font-size: 30px;
+    }
+    .para{
+        text-align: left;
+        max-width: 330px;
+    }
+    footer{
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+}
+@media(min-width:760px){
+    main{
+        justify-content: space-between !important;
+    }
+    .main-img{
+        display: flex;
+    }
+    .main-img img{
+        width:300px;
+    }
+    .lg-head{
+        font-size: 45px;
+
+    }
+    .m-head{
+        font-size: 30px;
+    }
+    .para{
+        max-width:450px;
+    }
+}
+@media(min-width:960px){
+    .container{
+        padding:10px 60px;
+    }
+    .main-img img{
+        width:500px;
+    }
+    .lg-head{
+        font-size:50px;
+    }
+}

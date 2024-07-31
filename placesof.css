@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
+*{
+    font-family: 'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 5s linear;
+}
+html{
+    font-size:62.5%;
+    color:#9cc2ab;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    scroll-padding-top:5rem;
+}
+section{
+    padding:5rem 9%;
+}
+
+.btn{
+    float:inherit;
+    padding:7px 35px;
+    border-radius:80px;
+    display:inline-block;
+    background-color:#2a5957;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.1), 0 2px 10px 0 rgba(0,0,0,0.1);
+    transition:all 4s ease;
+}
+.packages{
+    background:rgba(215, 215, 213, 0.8);
+}
+.packages .box-container{
+    display:-ms-grid;
+    display:grid;
+    -ms-grid-columns:(minmax(32rem,1fr))[auto-fit];
+    grid-template-columns:repeat(auto-fit,minmax(32rem, 1fr));
+    gap:1.5rem;
+}
+.packages .box-container .box{
+    text-align:center;
+    background:#feffef;
+    border:0.2rem solid #0ee291;
+    -webkit-box-shadow:0 0.5rem 1rem rgba(0,0,59,1);
+    box-shadow:0.3 0.8rem 1rem rgba(6, 6, 80, 0.8);
+    border-radius:.5rem;
+}
+.packages .box-container .box:hover{
+    background:#5cfec0;
+}
+.packages .box-container .box:hover .content>*{
+    color:#021108;
+}
+.packages .box-container .box:hover .btn{
+    border-color:#080969;
+}
+.packages .box-container .box:hover .btn:hover{
+    background:#fff;
+    color:#034a2e;
+}
+.packages .box-container .box .image{
+    height:25rem;
+    overflow:hidden;
+    padding:2rem;
+    padding-bottom:0;
+    border-radius:.6rem;
+}
+.packages .box-container .box .image img{
+    height:100%;
+    width:100%;
+    -o-object-fit:cover;
+    object-fit: cover;
+    border-radius:.5rem;
+}
+.packages .box-container .box .content{
+    padding:2rem;
+}
+.packages .box-container .box .content p{
+    font-size:1.5rem;
+    color:#10221b;
+    padding:1rem 0;
+    line-height:2;
+}
+.packages .box-container .box .content .price{
+    font-size:2rem;
+    color:#1b3548;
+}
